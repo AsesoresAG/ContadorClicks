@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contador de Clics</title>
+</head>
+<body>
+    <h1>Contador de Clics</h1>
+    <p>Clics: <span id="contador">0</span></p>
+    <button id="boton">Haz clic aquí</button>
+
+    <script>
+        // Inicializar el contador
+        var contador = 0;
+
+        // Obtener el elemento del botón y el contador
+        var boton = document.getElementById('boton');
+        var contadorElemento = document.getElementById('contador');
+
+        // Agregar un evento de clic al botón
+        boton.addEventListener('click', function() {
+            // Incrementar el contador
+            contador++;
+            
+            // Actualizar el valor del contador en la página
+            contadorElemento.textContent = contador;
+            
+            // Aquí puedes enviar los datos de estadísticas a un servidor o almacenarlos localmente en el dispositivo Android
+            // Para almacenarlos en Android, puedes utilizar localStorage o IndexedDB
+        });
+    </script>
+</body>
+</html>
